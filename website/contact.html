@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, intitial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./css/style.css">
+	<title>Prewish</title>
+</head>
+
+<html>
+
+<body>
+<nav>
+	<div class="logo">
+		<h4> Prewish Autar Photography </h4>
+	</div>
+	<ul class="nav-links">
+		<li>
+			<a href= "index.html">Home</a>
+		</li>
+		<li>
+			<a href= "contact.html">Contact Me</a>
+		</li>
+		<li>
+			<a href= "gallery.html">skills</a>
+		</li>
+		<li>
+			<a href= "grid.html">Grid</a>
+		</li>
+	</ul>
+	<div class="burger">
+		<div clas="line1"></div>
+		<div clas="line2"></div>
+		<div clas="line3"></div>
+	</div>
+</nav>
+
+
+<div class="contact">
+	<h3>Contact</h3>
+	<form>
+		<label>First Name</label><br>
+		<input type="text" name="firstname" placeholder="first name"><br>
+
+		<label>Last Name</label><br>
+		<input type="text" name="lastName" placeholder="last name"><br>
+
+		<label>Email</label><br>
+		<input type="email" name="email" placeholder="email"><br>
+
+		<label>Reden voor Shoot</label><br>
+		<select name="redenShoot"><br>
+			<option value="Kado">Kado</option>
+			<option value="Wedding">Wedding</option>
+			<option value="Anniversary">Anniversary</option>
+			<option value="fun">Fun</option>
+		</select>
+<br>
+		<div style="...">
+			<div>
+				<label id="answer">Person</label>
+			<input id="shoot1" class="text-box" type="number" name="shoot1" min="0" max="<?= htmlentities($amount); ?>" value="0" onclick="functionPersonOne()">
+
+		</div>
+
+		<label>message</label><br>
+		<textarea name="message" placeholder="enter text here"></textarea><br>
+	</form><br>
+	<button>Send</button><br>
+</div>
+
+<script>
+
+		function functionPersonOne ()
+		{
+			var a=document.getElementById("shoot1").value;
+			if (a=="1") {
+				document.getElementById("answer") .innerText="Person"; }
+
+			else{
+				document.getElementById("answer") .innerText="People";}
+		}
+
+		function goBack() {
+			window.history.back();
+		}
+	</script>
+
+
+
+
+
+<script src="app.js"></script>
+
+<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+		showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+		showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = slides.length}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";
+		dots[slideIndex-1].className += " active";
+	}
+</script>
+</body>
+</html>
